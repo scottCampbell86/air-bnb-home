@@ -2,14 +2,12 @@ import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
 import About from './About';
-import Home from './Home';
-import NavBar from './NavBar'; 
+import Home from './Home'; 
 
 export default class App extends Component {
   render() {
     return (
         <Router>
-        <NavBar />
         <h3>hi, i'm app :)</h3>
           <div>
             <Link to='/'>Home</Link>
