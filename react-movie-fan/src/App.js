@@ -1,25 +1,24 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
-import About from './About';
 import Home from './Home';
 import NavBar from './NavBar'; 
+import Help from './Help';
+import Host from './Host';
+import Login from './Login';
+import SignUp from './SignUp'
 
 export default class App extends Component {
   render() {
     return (
         <Router>
-        <NavBar />
-        <h3>hi, i'm app :)</h3>
-          <div>
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-          </div>
-          <Route exact path='/about' render={props => <About /> } />
+          <NavBar />
           <Route exact path='/' component={Home} />
-        <h6>and i'm still here</h6>
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={SignUp} />
+          <Route path='/help' component={Help} />
+          <Route exact path='/host' component={Host} />
         </Router>
-
     )
   }
 }
